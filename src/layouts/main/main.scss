@@ -1,0 +1,128 @@
+main {
+    display: flex;
+    height: 100%;
+}
+
+aside {
+    flex: 0 0 290px;
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 14.0351px 0px 25px rgba(86, 128, 248, 0.03),
+        35.0877px 0px 70px rgba(86, 128, 248, 0.05), 23.8596px 5.61404px 50px rgba(0, 0, 0, 0.02);
+}
+
+section {
+    flex: 1 1 auto;
+    background: linear-gradient(180deg, #f3f3fb 0%, #fdfbfd 100%) 2px 298px / 100% 100% no-repeat;
+}
+
+.sidebar {
+    height: 100%;
+
+    &__container {
+        max-width: 200px;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    &__flexbox {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__user {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 87px 0 75px 0;
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        span {
+            color: #0d1c2e;
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+
+    &__menu {
+        flex: 1 1 auto;
+
+        ul {
+            color: #707c97;
+            text-transform: uppercase;
+            li {
+                cursor: pointer;
+                span {
+                    display: inline-block;
+                    font-size: 16px;
+                    line-height: 24px;
+                    vertical-align: top;
+                    padding-left: 18px;
+                }
+                margin-bottom: 22px;
+
+                a:link,
+                :visited {
+                    color: #707c97;
+                }
+
+                a:hover,
+                :active {
+                    color: cornflowerblue;
+                }
+            }
+        }
+    }
+
+    &__footer {
+        padding: 40px 0;
+
+        span {
+            display: inline-block;
+            font-size: 16px;
+            line-height: 24px;
+            vertical-align: top;
+            padding-left: 18px;
+            color: #707c97;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+}
+
+.avatar {
+    &__box {
+        position: relative;
+    }
+
+    &__set {
+        position: absolute;
+        line-height: 120px;
+        text-align: center;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+        transition: 0.3s;
+
+        input {
+            display: none;
+            opacity: none;
+        }
+    }
+
+    &__set:hover {
+        opacity: 1;
+    }
+}

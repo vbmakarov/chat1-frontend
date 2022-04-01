@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "TTNorms";
+    src: local("TTNorms"), url(../assets/fonts/TTNorms-Regular.woff) format("opentype");
+}
+
+@font-face {
+    font-family: "TTNorms";
+    font-weight: 400;
+    src: local("TTNorms"), url(../assets/fonts/TTNorms-Medium.woff) format("opentype");
+}
+
+@font-face {
+    font-family: "TTNorms";
+    font-weight: 700;
+    src: local("TTNorms"), url(../assets/fonts/TTNorms-Bold.woff) format("opentype");
+}

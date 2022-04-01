@@ -1,0 +1,42 @@
+.login {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__left {
+        flex: 1 1 70%;
+        background: -webkit-linear-gradient(3deg, #fcba03, #7388fc, #5f98e3); /* Chrome 10-25, Safari 5.1-6 */
+        background: url(../../assets/img/chat.svg) center center no-repeat,
+            linear-gradient(3deg, #fcba03, #7388fc, #5f98e3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        height: 100%;
+        position: relative;
+
+        h2 {
+            position: absolute;
+            top: 20%;
+            left: 15%;
+            font-size: 26px;
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+
+    &__right {
+        flex: 0 1 30%;
+        min-width: 340px;
+        padding: 100px 25px 0;
+        h1 {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__recovery {
+        display: block;
+        color: #48515c;
+        text-decoration: underline;
+    }
+
+    &__regist {
+        margin-top: 20px;
+    }
+}

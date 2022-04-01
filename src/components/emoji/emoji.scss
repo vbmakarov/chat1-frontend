@@ -1,0 +1,10 @@
+.emoji {
+    &__container {
+    }
+
+    &__item {
+        box-sizing: content-box;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
