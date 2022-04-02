@@ -9,7 +9,7 @@ class FileService extends Service {
         if (avatarImg.length > 0) {
             const avatar = avatarImg[0]
             formData.append('avatar', avatar)
-            return await this.$axiosInstance.post<TUserResponseData>('/avatar', formData, {
+            return await this.$axiosInstance.post<TUserResponseData>('/api/avatar', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -29,7 +29,7 @@ class FileService extends Service {
             formData.append('text', data.text)
             formData.append('dialog_id', data.dialog_id)
             formData.append('author', data.author)
-            return await this.$axiosInstance.post('/message/files', formData, {
+            return await this.$axiosInstance.post('/api/message/files', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -39,7 +39,7 @@ class FileService extends Service {
     }
 
     async downloadFile(filename: string) {
-        const response = await this.$axiosInstance.get('/upload/file/' + filename, { responseType: 'blob' })
+        const response = await this.$axiosInstance.get('/api/upload/file/' + filename, { responseType: 'blob' })
         const url = window.URL.createObjectURL(new Blob([response.data]));
         const link = document.createElement('a');
         link.href = url;

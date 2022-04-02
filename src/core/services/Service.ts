@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
 import { AxiosAuthResponse } from '../models/AuthModel'
-import { API_URL } from './config'
+import { config } from '../../config'
 
 export class Service {
 
@@ -10,7 +10,7 @@ export class Service {
     constructor() {
         this._retry = false
         this.$axiosInstance = axios.create({
-            baseURL: API_URL,
+            baseURL: config.SERVER_URL,
             withCredentials: true
         })
         this.interceptorCreate()
@@ -49,6 +49,6 @@ export class Service {
     }
 
     async refreshAuth() {
-        return await this.$axiosInstance.get<AxiosAuthResponse>('/refresh')
+        return await this.$axiosInstance.get<AxiosAuthResponse>('/api/refresh')
     }
 }

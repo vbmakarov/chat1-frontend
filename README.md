@@ -12,7 +12,6 @@
 ## Запуск приложения:
 1. Backend тут https://github.com/vbmakarov/chat1-backend
 Не забудьте установить зависимости командой npm i
-2. Для локального сервера, в файле package.json заменить строку: "start": "node server.js", на "start": "react-scripts build". Перейти в папку src командой npm start или yarn start запустить приложение.
+2. Для локального сервера, в файле package.json заменить строку: "start": "node server.js", на "start": "react-scripts build". Перейти в папку src, в файле config.ts вбить адрес сервера (backend) командой npm start или yarn start запустить приложение.
 Приложение запустится на http://localhost:3000
-3. Для рабочего VPS сервера произвести сборку приложения командой npm build и запустить
-приложение командой npm start
+3. Для рабочего VPS сервера: перейти в папку src, в файле config.ts вбить адрес сервера (backend). Произвести сборку приложения командой npm build и запустить приложение командой npm start
